@@ -1,0 +1,366 @@
+:root{
+    --primary : #cfb521bd;
+    --bg : #010101;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg);
+    /* min-height: 5000px; */
+    scroll-behavior: smooth;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 1rem 7%;
+    border-bottom:1.3px solid #726c19;
+    position: fixed;
+    width: 100vw;
+    z-index: 9999;
+    background-color: rgba(0, 0, 0, .3);
+}
+nav .logo h1{
+    color: #fff;
+    font-style: italic;
+    font-weight: 700;
+    font-size: 1.6rem;
+    mix-blend-mode: difference;
+}
+nav .logo h1 span{
+    color: var(--primary);
+    mix-blend-mode: difference;
+}
+nav .navbar-menu a{
+    display: inline-block;
+    margin: 0 1.1rem;
+    color: #fff;
+    font-size: 1.1rem;
+}
+nav .navbar-menu a::after{
+    content: "";
+    display: block;
+    border-bottom: 2px solid var(--primary);
+    margin-bottom: 10px;
+    transform: scale(0);
+    transition: .5s;
+}
+nav .navbar-menu a:hover::after{
+    transform: scale(.8);
+}
+nav .navbar-extra a{
+    margin: 0 10px;
+    color: #fff;
+    transition: .5s;
+}
+nav .navbar-extra a:hover{
+    color: var(--primary);
+}
+#menu{
+    display: none;
+}
+
+
+/* hero */
+.hero{
+    display: flex;
+    background-image: url("copi.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    align-items: center;
+    position: relative;
+}
+.hero::after{
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 30%;
+    background-image: linear-gradient(0deg,var(--bg)8%,rgba(255,255,255,0) 65%);
+}
+.hero main{
+    padding: 30px 7%;
+    max-width: 45rem;
+}
+.hero main h2{
+    color:#fff;
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+}
+.hero main h2 span{
+    color: var(--primary);
+}
+.hero main p{
+    margin-top: 1.2rem;
+    color: #ffff;
+    font-weight: 100;
+    mix-blend-mode: difference;
+    box-sizing: border-box;
+}
+.hero main a{
+    display: inline-block;
+    padding: .7rem 7%;
+    background-color: var(--primary);
+    color: #fff;
+    border-radius: 2px;
+    margin-top: 2rem;
+    transition: .4s;
+}
+.hero main a:hover{
+    background-color: rgba(0, 0, 0, .3);
+    border: 1.5px solid #fff;
+    box-sizing: border-box;
+}
+/* hero end */
+
+/* abbout */
+#abbout h2,#menu h2,.menu h2 ,#menu-kami h2 , #contact h2{
+    margin: 10rem auto 4rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1.6rem;
+}
+#abbout h2 span,#menu h2 span,#menu-kami span , #contact h2 span{
+    color: var(--primary);
+}
+#abbout .row{
+    display: flex;
+}
+#abbout .row .picture{
+    flex: 1 1 30rem;
+}
+#abbout .row .picture img{
+    width: 100%;
+}
+#abbout .row .content{
+    flex:1 1 45rem;
+    padding: 3rem 3%;
+}
+#abbout .row .content h3{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-left: 1rem;
+}
+#abbout .row .content p{
+    color: rgb(107, 100, 100);
+    font-weight: 100;
+    margin: 1.8rem 2%;
+}
+
+/* menu */
+#menu-kami .row{
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+}
+#menu-kami .col{
+    text-align: center;
+    width: 8%;
+    margin-top: 1.4rem;
+    transition: .7s ease-in-out;
+}
+#menu-kami .col:hover{
+    width: 20%;
+    transition: .7s ease-in-out;
+}
+#menu-kami .col img{
+    /* width: 20%; */
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s;
+    object-fit: cover;
+    border: 2px solid #ffff;
+    height: 20rem;
+    box-shadow: 2px 3px 10px rgba(255,255,255,0.4);
+}
+#menu-kami .col h3{
+    color: #fff;
+    margin-top: 0.8rem;
+    cursor: pointer;
+}
+/* #menu-kami .col img:hover{
+    transform: scale(1.1);
+    width: 80%;
+} */
+#menu-kami .col p , #contact p{
+    color: rgb(102, 98, 98);
+    max-width: 30rem;
+    text-align: center;
+    margin:auto;
+    cursor: pointer;
+}
+/* contact */
+
+#contact h2{
+    margin-bottom: .7rem;
+}
+#contact p{
+    margin: 1rem auto 7rem;
+}
+#contact .row{
+    display: flex;
+    background-color: #222;
+}
+#contact .row iframe{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+#contact .row form{
+    flex: 1 1 45rem;
+    text-align: center;
+    padding: 5rem 2rem;
+}
+#contact .row form .input{
+    background-color: var(--bg);
+    display: flex;
+    text-align: center;
+    border: 1px solid #fff;
+    margin-top: 1rem;
+    margin-left: 2rem;
+    align-items: center;
+    padding: 0 2rem;
+    color: #fff;
+    border-radius: 5px;
+}
+#contact .row form .input input{
+   background: none;
+    width: 100%;
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 1.6rem ;
+    padding: .3rem;
+}
+#contact .row form  button{
+    border: none;
+    padding: .9rem 2rem;
+    background-color: var(--primary);
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border-radius: 3px;
+}
+/* footer */
+footer{
+    height: 5.5rem;
+    background-color: var(--primary);
+    text-align: center;
+    padding: 1rem 0;
+}
+footer .social a{
+    color: #fff;
+}
+footer .created p{
+    color: rgb(226, 216, 216);
+}
+footer .created p a{
+    color: var(--bg);
+}
+
+
+
+/* rspomsive untuk mobile  */
+@media screen and (max-width:768px){
+    html{
+        font-size: 65.5%;
+    }
+    nav .navbar-menu{
+        position: absolute;
+        top: 100%;
+        right: -100%;
+        width: 20rem;
+        height: 100vh;
+        background-color: #fff;
+        transition: .5s;
+    }
+    .navbar-menu.active {
+        right: 0;
+    }
+    nav .navbar-menu a{
+        color: #000000;
+        display: block;
+        margin-top: 20px;
+        font-size: 1.7em;
+        transition: .5s;
+    }
+    nav .navbar-menu a:hover{
+        color: var(--primary);
+    }
+    nav .navbar-menu a::after{
+        border-bottom: none;
+    }
+    #menu{
+        display: inline;
+    }
+
+    #abbout .row{
+        flex-wrap: wrap;
+    }
+    #abbout .row .picture img{
+        height: 24rem;
+        object-fit: cover;
+        object-position: center;
+    }
+    #menu-kami .row{
+        flex-wrap: wrap;
+    }
+    #contact .row{
+        flex-wrap: wrap;
+    }
+    #contact .row iframe{
+        height: 30rem;
+    }
+    #contact .row form .input{
+        margin-top: 2rem;
+    }
+    #contact .row form{
+        padding-top: .6rem;
+    }
+    #menu-kami .row .col{
+        width: 40%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    #menu-kami .row .col img:hover{
+        filter:brightness(.3);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
