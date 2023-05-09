@@ -9,8 +9,9 @@ const detail = document.querySelectorAll("#eye")
 const modal = document.querySelector(".modal")
 
 // hamburger
-document.querySelector("#menu").onclick = () => {
+document.querySelector("#menu").onclick = (e) => {
     navbar.classList.toggle("active")
+    e.preventDefault()
 }
 // shoping-cart
 document.querySelector("#sopping").onclick = (e) => {
